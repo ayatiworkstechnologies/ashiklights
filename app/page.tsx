@@ -1,65 +1,55 @@
-import Image from "next/image";
+"use client";
+import { useState } from "react";
 
-export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+const spaces = [
+  ["Living Room", "/images/crystal-chandelier.png"], ["Dining Room", "/images/hero-chandelier.png"],
+  ["Double-Height Living Room", "/images/hero-chandelier.png"], ["Staircase", "/images/crystal-chandelier.png"],
+  ["Villa Facade", "/images/outdoor-lights.png"], ["Garden & Pathway", "/images/outdoor-lights.png"]
+];
+const collections = ["Crystal Elegance","Modern Minimal","Contemporary Statement","Classic Luxury","Linear & Spiral Designs"];
+const faqs = [
+ ["How do I select the correct chandelier size?","Our specialists consider room dimensions, furniture layout and ceiling height before recommending a suitable diameter and drop."],
+ ["Can I choose different finishes or light temperatures?","Options vary by collection. Share your preferred finish and ambience so our team can shortlist suitable designs."],
+ ["Are chandeliers suitable for low ceilings?","Yes. Flush and compact chandelier styles can work well in lower spaces when proportioned correctly."],
+ ["Do you provide guidance for installation?","We provide product-selection and installation-planning guidance based on your site details."],
+ ["Can I view products at a showroom?","Yes. Book a visit to experience the scale, finish and glow before you decide."]
+];
+
+export default function Home(){
+ const [filter,setFilter]=useState("All");
+ return <main>
+  <header className="topbar"><a className="brand" href="#">ASHIK LIGHTS</a><nav className="nav"><a href="#spaces">Chandeliers</a><a href="#spaces">High Ceiling</a><a href="#spaces">Outdoor Lights</a></nav><div className="header-actions"><a className="btn outline" href="tel:+919876543210"><Icon name="phone"/>Call Now</a><a className="btn gold" href="https://wa.me/919876543210"><Icon name="whatsapp"/>WhatsApp</a></div></header>
+  <section className="hero"><div className="hero-shade"/><div className="hero-copy"><p className="eyebrow">LUXURY LIGHTING SINCE 2016</p><h1>Premium Chandeliers<br/>That Transform<br/>Every Room</h1><p>Discover statement chandeliers crafted to bring warmth, elegance and personality to your interiors.</p><div className="actions"><a className="btn gold" href="#spaces">Explore Collections <span>-&gt;</span></a><a className="btn outline" href="https://wa.me/919876543210">Get Price on WhatsApp</a></div></div><form className="lead-card" onSubmit={e=>e.preventDefault()}><h2>Find the Right Chandelier<br/>for Your Space</h2><label><Icon name="user"/><input required placeholder="Name"/></label><label><Icon name="phone"/><input required type="tel" placeholder="Mobile Number"/></label><label><Icon name="home"/><select defaultValue=""><option value="" disabled>Property Type</option><option>Apartment</option><option>Villa</option><option>Commercial</option></select></label><label><Icon name="wallet"/><select defaultValue=""><option value="" disabled>Budget Range</option><option>25,000 - 50,000</option><option>50,000 - 1,00,000</option><option>1,00,000+</option></select></label><label><Icon name="pin"/><select defaultValue=""><option value="" disabled>Preferred Showroom</option><option>Teynampet, Chennai</option><option>Nearest showroom</option></select></label><button className="btn gold submit">GET FREE LIGHTING CONSULTATION</button><small>Our lighting specialist will contact you shortly.</small></form></section>
+  <section className="trust-strip">{[["calendar","Since 2016"],["showroom","6 Showrooms"],["star","Latest Lighting Collections"],["user","Expert Product Guidance"],["home","Lighting Solutions for Every Space"]].map(([icon,text])=><div key={text}><b><Icon name={icon}/></b><span>{text}</span></div>)}</section>
+  <section id="spaces" className="section"><Title>Shop by Space</Title><p className="section-intro">Choose the space you want to transform and explore suitable lighting ideas.</p><div className="space-grid">{spaces.map(([title,image])=><a className="space-card" href="#consultation" key={title} style={{backgroundImage:`url(${image})`}}><span><strong>{title}</strong><small>View Designs -&gt;</small></span></a>)}</div></section>
+  <section className="section"><Title>Featured Collections</Title><div className="editorial">{collections.map((title,i)=><article key={title} style={{backgroundImage:`url(${i===4?"/images/outdoor-lights.png":i%2?"/images/hero-chandelier.png":"/images/crystal-chandelier.png"})`}}><span>0{i+1}</span><div><h3>{title}</h3><p>Ideal spaces, available sizes and finish options</p><a href="#consultation">Enquire -&gt;</a></div></article>)}</div></section>
+  <section className="photo-help panel"><div><p className="eyebrow">PERSONALISED GUIDANCE</p><h2>Not Sure Which Light Fits Your Space?</h2><p>Send us a photo of your room. Our lighting specialist will suggest suitable designs based on your room size, ceiling height and interior style.</p><div className="actions"><label className="btn gold upload-btn"><Icon name="upload"/>Upload Your Space Photo<input type="file" accept="image/*"/></label><a className="btn outline" href="https://wa.me/919876543210"><Icon name="whatsapp"/>Chat on WhatsApp</a></div></div><ol>{["Upload room photo","Enter room dimensions","Select preferred style","Receive recommendations","Visit nearest showroom"].map(x=><li key={x}>{x}</li>)}</ol></section>
+  <section className="section"><Title>Before & After Inspiration</Title><div className="transform-grid">{[["Living room transformation","/images/crystal-chandelier.png","/images/hero-chandelier.png"],["Villa facade transformation","/images/hero-chandelier.png","/images/outdoor-lights.png"]].map(([title,before,after])=><article key={title}><div className="compare"><div className="before" style={{backgroundImage:`url(${before})`}}><span>BEFORE</span></div><div style={{backgroundImage:`url(${after})`}}><span>AFTER</span></div><b>-&gt;</b></div><h3>{title}</h3></article>)}</div></section>
+  <section className="section"><Title>Lighting Expertise Beyond Product Selection</Title><div className="reason-grid">{[["diamond","Curated modern and classic collections"],["home","Solutions for homes, villas and commercial spaces"],["measure","Guidance based on room size and ceiling height"],["showroom","Multiple showroom locations"],["award","Installation planning support"]].map(([icon,text])=><article className="reason" key={text}><b><Icon name={icon}/></b><h3>{text}</h3></article>)}</div></section>
+  <section className="section project-section"><Title>Project Gallery</Title><div className="filters">{["All","Chandeliers","High Ceiling","Outdoor","Residential","Commercial"].map(x=><button className={filter===x?"active":""} onClick={()=>setFilter(x)} key={x}>{x}</button>)}</div><div className="project-grid">{spaces.map(([title,image],i)=><article key={title} style={{backgroundImage:`url(${image})`}}><span>{filter==="All"?(i>3?"Commercial":"Residential"):filter}</span><div><h3>{title}</h3><a href="#consultation">Get a Similar Design</a></div></article>)}</div></section>
+  <section className="visit panel"><div><p className="eyebrow">TEYNAMPET, CHENNAI</p><h2>See the Lights Before You Decide</h2><p>Experience the scale, finish and glow of our latest lighting collections at our Anna Salai showroom, opposite Kamaraj Arangam.</p><div className="actions"><a className="btn gold" href="#visit-form"><Icon name="calendar"/>Book Showroom Visit</a><a className="btn outline" href="#"><Icon name="pin"/>Get Directions</a><a className="btn outline" href="tel:+919876543210"><Icon name="phone"/>Call Showroom</a></div></div><form id="visit-form" onSubmit={e=>e.preventDefault()}><input type="date" aria-label="Preferred date"/><input type="time" aria-label="Preferred time"/><select defaultValue=""><option value="" disabled>Product interest</option><option>Chandeliers</option><option>High Ceiling</option><option>Outdoor Lights</option></select><button className="btn gold">REQUEST VISIT</button></form></section>
+  <section className="testimonial section"><blockquote>â€œWe were unsure about the chandelier size for our double-height living room. The team helped us select the right proportion and design.â€</blockquote><p>Sample testimonial - replace with a client-approved customer review before publishing.</p></section>
+  <section className="section faq"><Title>Frequently Asked Questions</Title>{faqs.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</section>
+  <section id="consultation" className="final-cta"><div><p className="eyebrow">PERSONALISED LIGHTING SUPPORT</p><h2>Let&apos;s Find the Perfect Light for Your Space</h2><p>Share your room photo, dimensions or interior design. Our team will help you shortlist suitable lighting options.</p><div className="actions"><a className="btn gold" href="#">Get Free Consultation</a><a className="btn outline" href="https://wa.me/919876543210"><Icon name="whatsapp"/>WhatsApp Your Requirement</a></div></div></section>
+  <footer><a href="tel:+919876543210"><Icon name="phone"/>Call Now</a><a href="https://wa.me/919876543210"><Icon name="whatsapp"/>WhatsApp</a></footer>
+ </main>
 }
+function Icon({name}:{name:string}){
+ const paths:Record<string,React.ReactNode>={
+  phone:<><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></>,
+  user:<><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></>,
+  home:<><path d="m3 11 9-8 9 8v10H3z"/><path d="M9 21v-7h6v7"/></>,
+  pin:<><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></>,
+  wallet:<><rect x="2" y="5" width="20" height="15" rx="2"/><path d="M16 12h6M4 5l13-3v3"/></>,
+  calendar:<><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4m8-4v4M3 10h18"/></>,
+  star:<path d="m12 2 3 6 7 .9-5 4.9 1.2 7L12 17.5 5.8 21 7 13.8 2 9l7-.9z"/>,
+  showroom:<><path d="M3 9h18L19 3H5zM5 9v12h14V9M9 21v-7h6v7"/><path d="M3 9c0 2 3 2 3 0 0 2 3 2 3 0 0 2 3 2 3 0 0 2 3 2 3 0 0 2 3 2 3 0"/></>,
+  diamond:<><path d="m3 8 4-5h10l4 5-9 13z"/><path d="M3 8h18M7 3l5 18 5-18"/></>,
+  measure:<><path d="m4 17 13-13 3 3L7 20z"/><path d="m13 8 3 3m-6 0 2 2m-5 1 2 2"/></>,
+  award:<><circle cx="12" cy="9" r="6"/><path d="m8 14-1 8 5-3 5 3-1-8M9 9l2 2 4-4"/></>,
+  upload:<><path d="M12 16V4m-5 5 5-5 5 5"/><path d="M5 15v5h14v-5"/></>,
+  whatsapp:<><path d="M20 11.5a8 8 0 0 1-11.8 7L3 20l1.5-5A8 8 0 1 1 20 11.5z"/><path d="M8.5 8c.5 3 2 4.5 5 5"/></>
+ };
+ return <svg className="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>{paths[name]}</svg>
+}
+function Title({children}:{children:React.ReactNode}){return <div className="section-title"><h2>{children}</h2><span/></div>}
