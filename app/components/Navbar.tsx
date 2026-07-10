@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FiPhone, FiMenu, FiX } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -15,10 +16,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-[72px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <span className="text-lg lg:text-xl font-bold tracking-wide text-gold font-playfair uppercase">
-              Ashik Lights
-            </span>
+          <Link href="/" className="flex items-center shrink-0" aria-label="Ashik Lights home">
+            <Image
+              src="/logo.png"
+              alt="Ashik Lights"
+              width={52}
+              height={52}
+              priority
+              className="h-11 w-11 lg:h-12 lg:w-12 object-contain"
+            />
           </Link>
 
           {/* Center Nav - Desktop */}

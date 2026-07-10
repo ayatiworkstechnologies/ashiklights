@@ -26,22 +26,6 @@ export default function ShowroomCTA() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gold text-gold text-sm font-semibold transition-all duration-300 hover:bg-gold hover:text-background"
-              >
-                Book Showroom Visit
-                <FiArrowRight />
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-foreground/20 text-foreground text-sm font-semibold transition-all duration-300 hover:bg-foreground/5 hover:border-foreground/40"
-              >
-                <FiNavigation />
-                Get Directions
-              </a>
-            </div>
           </div>
         </div>
         </ScrollReveal>

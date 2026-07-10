@@ -2,25 +2,7 @@ import ScrollReveal from "./ScrollReveal";
 import { FiCamera } from "react-icons/fi";
 
 export default function NeedHelp() {
-  const steps = [
-    {
-      num: 1,
-      title: "Share room photo",
-      desc: "Upload a photo of your space.",
-    },
-    {
-      num: 2,
-      title: "Get expert suggestions",
-      desc: "Receive customized lighting recommendations.",
-    },
-    {
-      num: 3,
-      title: "Visit showroom or chat on WhatsApp",
-      desc: "See the lights in person or connect with us.",
-    },
-  ];
-
-  return (
+return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal direction="up">
