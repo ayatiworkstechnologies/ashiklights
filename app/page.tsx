@@ -40,7 +40,11 @@ export default function Home() {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/leads", {
+      const apiPath = window.location.pathname.includes('/branded-lighting-shop') 
+        ? '/branded-lighting-shop/api/leads' 
+        : '/api/leads';
+        
+      const response = await fetch(apiPath, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +54,10 @@ export default function Home() {
       
       if (response.ok) {
         setIsSubmitted(true);
-        router.push("/thank-you");
+        const thankYouPath = window.location.pathname.includes('/branded-lighting-shop')
+          ? '/branded-lighting-shop/thank-you'
+          : '/thank-you';
+        router.push(thankYouPath);
       } else {
         console.error("Failed to submit lead");
       }
