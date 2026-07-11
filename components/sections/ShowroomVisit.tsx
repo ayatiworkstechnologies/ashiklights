@@ -25,7 +25,7 @@ export function ShowroomVisit({ onOpenModal }: ShowroomVisitProps) {
               <Icon name="pin" />
               Get Directions
             </Link>
-            <Link className="w-full sm:w-auto h-11 px-6 rounded-md inline-flex items-center justify-center gap-2 text-sm font-semibold transition hover:-translate-y-px hover:brightness-110 border border-gold-dark/70 bg-background/60 text-white" href="tel:+919876543210">
+            <Link className="w-full sm:w-auto h-11 px-6 rounded-md inline-flex items-center justify-center gap-2 text-sm font-semibold transition hover:-translate-y-px hover:brightness-110 border border-gold-dark/70 bg-background/60 text-white" href="tel:+918754860555">
               <Icon name="phone" />
               Call Showroom
             </Link>

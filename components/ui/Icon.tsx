@@ -14,10 +14,12 @@ import {
   FiArrowRight,
   FiArrowUp,
   FiArrowDown,
+  FiMail,
 } from "react-icons/fi";
 import { FaWhatsapp, FaGoogle } from "react-icons/fa";
 
 const iconMap: Record<string, IconType> = {
+  mail: FiMail,
   phone: FiPhone,
   whatsapp: FaWhatsapp,
   google: FaGoogle,

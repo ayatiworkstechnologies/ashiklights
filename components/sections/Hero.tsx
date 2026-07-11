@@ -35,7 +35,7 @@ export function Hero({ isSubmitted, isSubmitting, onOpenModal, onSubmit, onReset
           <Link className="w-full sm:w-auto h-12 px-8 rounded-full inline-flex items-center justify-center gap-2 text-sm font-semibold transition hover:-translate-y-1 text-background bg-gradient-to-r from-gold-light via-gold to-gold-dark shadow-[0_4px_14px_rgba(215,169,79,0.3)] hover:shadow-[0_6px_20px_rgba(215,169,79,0.5)]" href="#spaces">
             Explore Collections <Icon name="arrowRight" className="w-4 h-4" />
           </Link>
-          <Link className="w-full sm:w-auto h-12 px-8 rounded-full inline-flex items-center justify-center gap-3 text-sm font-semibold transition hover:-translate-y-1 border border-white/20 bg-white/5 backdrop-blur-md text-white hover:bg-white/10" href="https://wa.me/919876543210">
+          <Link className="w-full sm:w-auto h-12 px-8 rounded-full inline-flex items-center justify-center gap-3 text-sm font-semibold transition hover:-translate-y-1 border border-white/20 bg-white/5 backdrop-blur-md text-white hover:bg-white/10" href="https://wa.me/918754860555">
             Get Price on WhatsApp
           </Link>
         </div>

@@ -19,7 +19,7 @@ export function FinalCTA({ onOpenModal }: FinalCTAProps) {
           <Link className="w-full sm:w-auto h-11 px-6 rounded-md inline-flex items-center justify-center gap-3 text-sm font-semibold transition hover:-translate-y-px hover:brightness-110 text-background bg-gradient-to-br from-gold-gradient-start to-gold-gradient-end shadow-[inset_0_0_0_1px_rgba(245,217,148,0.33)]" href="#" onClick={onOpenModal}>
             Get Free Consultation
           </Link>
-          <Link className="w-full sm:w-auto h-11 px-6 rounded-md inline-flex items-center justify-center gap-3 text-sm font-semibold transition hover:-translate-y-px hover:brightness-110 border border-gold-dark/70 bg-background/60 text-white" href="https://wa.me/919876543210">
+          <Link className="w-full sm:w-auto h-11 px-6 rounded-md inline-flex items-center justify-center gap-3 text-sm font-semibold transition hover:-translate-y-px hover:brightness-110 border border-gold-dark/70 bg-background/60 text-white" href="https://wa.me/918754860555">
             <Icon name="whatsapp" />
             WhatsApp Your Requirement
           </Link>

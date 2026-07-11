@@ -30,11 +30,11 @@ export function Header() {
       </nav>
 
       <div className="flex gap-3 items-center">
-        <Link className="h-9 md:h-10 px-3 md:px-4 rounded-full inline-flex items-center justify-center gap-2 text-sm font-medium transition-all hover:bg-white/5 border border-white/10 text-white" href="tel:+919876543210">
+        <Link className="h-9 md:h-10 px-3 md:px-4 rounded-full inline-flex items-center justify-center gap-2 text-sm font-medium transition-all hover:bg-white/5 border border-white/10 text-white" href="tel:+918754860555">
           <Icon name="phone" />
           <span className="hidden lg:inline">Call Now</span>
         </Link>
-        <Link className="h-9 md:h-10 px-4 md:px-5 rounded-full inline-flex items-center justify-center gap-2 text-sm font-semibold transition-all hover:-translate-y-0.5 text-background bg-gradient-to-r from-gold-light via-gold to-gold-dark shadow-[0_4px_14px_rgba(215,169,79,0.3)] hover:shadow-[0_6px_20px_rgba(215,169,79,0.4)] relative overflow-hidden group" href="https://wa.me/919876543210">
+        <Link className="h-9 md:h-10 px-4 md:px-5 rounded-full inline-flex items-center justify-center gap-2 text-sm font-semibold transition-all hover:-translate-y-0.5 text-background bg-gradient-to-r from-gold-light via-gold to-gold-dark shadow-[0_4px_14px_rgba(215,169,79,0.3)] hover:shadow-[0_6px_20px_rgba(215,169,79,0.4)] relative overflow-hidden group" href="https://wa.me/918754860555">
           <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
           <Icon name="whatsapp" />
           <span className="hidden md:inline relative z-10">WhatsApp</span>
