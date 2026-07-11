@@ -9,6 +9,10 @@ interface ConsultationModalProps {
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
+const TAMIL_NADU_CITIES = [
+  "Chennai", "Coimbatore", "Madurai", "Tiruchirappalli", "Salem", "Tirunelveli", "Tiruppur", "Erode", "Vellore", "Thoothukudi", "Dindigul", "Thanjavur", "Nagercoil", "Hosur", "Avadi", "Kanchipuram", "Karur", "Cuddalore", "Tambaram", "Kumbakonam", "Sivakasi", "Karaikudi", "Namakkal", "Pudukkottai", "Tiruvannamalai", "Ambur", "Ambasamudram", "Arakkonam", "Arani", "Ariyalur", "Aruppukkottai", "Attur", "Bhavani", "Bodinayakanur", "Chengalpattu", "Chidambaram", "Chinnamanur", "Coonoor", "Cumbum", "Devakottai", "Dharapuram", "Dharmapuri", "Gobichettipalayam", "Gudalur", "Gudiyatham", "Harur", "Jayankondam", "Kallakurichi", "Kayalpattinam", "Kodaikanal", "Komarapalayam", "Kotagiri", "Krishnagiri", "Kulithalai", "Kuzhithurai", "Mannargudi", "Mayiladuthurai", "Melur", "Mettupalayam", "Mettur", "Nagapattinam", "Neyveli", "Nilakottai", "Oddanchatram", "Palani", "Palladam", "Paramakudi", "Pattukkottai", "Perambalur", "Periyakulam", "Pollachi", "Poonamallee", "Rasipuram", "Ranipet", "Ramanathapuram", "Sathyamangalam", "Shenkottai", "Sirkazhi", "Srivilliputhur", "Tenkasi", "Theni", "Thiruthuraipoondi", "Tiruchengode", "Tirupattur", "Tiruttani", "Tiruvallur", "Tiruvarur", "Udumalaipettai", "Udhagamandalam", "Ulundurpet", "Usilampatti", "Vandavasi", "Vaniyambadi", "Viluppuram", "Virudhunagar", "Walajapet", "Yercaud"
+];
+
 export function ConsultationModal({ isOpen, isSubmitted, isSubmitting, onClose, onSubmit }: ConsultationModalProps) {
   if (!isOpen) return null;
 
@@ -28,7 +32,7 @@ export function ConsultationModal({ isOpen, isSubmitted, isSubmitting, onClose, 
           </div>
         ) : (
           <form className="flex flex-col gap-2" onSubmit={onSubmit}>
-            <h2 className="font-playfair text-2xl mb-4 text-center">Get a Free Consultation</h2>
+            <h2 className="font-playfair text-2xl mb-4 text-center">Enquire Now</h2>
             <label className="h-11 px-3.5 my-1.5 flex gap-3 items-center text-text-muted border border-border rounded-md bg-surface-input/80">
               <Icon name="user" />
               <input name="name" className="flex-1 w-full bg-transparent border-none outline-none text-foreground text-sm" required placeholder="Full Name" />
@@ -43,20 +47,12 @@ export function ConsultationModal({ isOpen, isSubmitted, isSubmitting, onClose, 
             </label>
             <label className="h-11 px-3.5 my-1.5 flex gap-3 items-center text-text-muted border border-border rounded-md bg-surface-input/80">
               <Icon name="pin" />
-              <select name="city" className="flex-1 w-full bg-transparent border-none outline-none text-foreground text-sm cursor-pointer" defaultValue="" required>
-                <option className="bg-surface text-white" value="" disabled>Select City</option>
-                <option className="bg-surface text-white">Chennai</option>
-                <option className="bg-surface text-white">Coimbatore</option>
-                <option className="bg-surface text-white">Madurai</option>
-                <option className="bg-surface text-white">Tiruchirappalli</option>
-                <option className="bg-surface text-white">Salem</option>
-                <option className="bg-surface text-white">Tirunelveli</option>
-                <option className="bg-surface text-white">Tiruppur</option>
-                <option className="bg-surface text-white">Erode</option>
-                <option className="bg-surface text-white">Vellore</option>
-                <option className="bg-surface text-white">Thoothukudi</option>
-                <option className="bg-surface text-white">Other</option>
-              </select>
+              <input name="city" list="tn-cities-modal" className="flex-1 w-full bg-transparent border-none outline-none text-foreground text-sm" required placeholder="City / District" autoComplete="off" />
+              <datalist id="tn-cities-modal">
+                {TAMIL_NADU_CITIES.map(city => (
+                  <option key={city} value={city} />
+                ))}
+              </datalist>
             </label>
             <label className="h-11 px-3.5 my-1.5 flex gap-3 items-center text-text-muted border border-border rounded-md bg-surface-input/80">
               <Icon name="home" />

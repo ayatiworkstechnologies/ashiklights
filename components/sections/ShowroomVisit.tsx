@@ -40,7 +40,7 @@ export function ShowroomVisit({ onOpenModal }: ShowroomVisitProps) {
             allowFullScreen={false} 
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+            className="w-full h-full"
           ></iframe>
         </div>
       </div>

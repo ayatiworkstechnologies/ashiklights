@@ -11,7 +11,7 @@ export function ProductFeatures({ onOpenModal }: ProductFeaturesProps) {
       <article id="chandeliers" className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center px-4 md:px-[6%]">
         <div
           className="reveal-left h-80 md:h-[520px] bg-cover bg-center rounded-xl border border-border shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
-          style={{ backgroundImage: "url(/images/chandeliers-section.png)" }}
+          style={{ backgroundImage: "url(/images/home-1.png)" }}
         />
         <div className="reveal-right flex flex-col items-start text-left">
           <p className="text-xs tracking-widest text-gold font-semibold mb-3">CHANDELIERS</p>
@@ -33,7 +33,7 @@ export function ProductFeatures({ onOpenModal }: ProductFeaturesProps) {
       <article id="high-ceiling" className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center px-4 md:px-[6%]">
         <div
           className="reveal-right h-80 md:h-[520px] bg-cover bg-center rounded-xl border border-border shadow-[0_20px_50px_rgba(0,0,0,0.3)] md:order-last"
-          style={{ backgroundImage: "url(/images/high-ceiling-section.png)" }}
+          style={{ backgroundImage: "url(/images/home-2.png)" }}
         />
         <div className="reveal-left flex flex-col items-start text-left">
           <p className="text-xs tracking-widest text-gold font-semibold mb-3">HIGH CEILING</p>
@@ -55,7 +55,7 @@ export function ProductFeatures({ onOpenModal }: ProductFeaturesProps) {
       <article id="outdoor-lights" className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center px-4 md:px-[6%]">
         <div
           className="reveal-left h-80 md:h-[520px] bg-cover bg-center rounded-xl border border-border shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
-          style={{ backgroundImage: "url(/images/outdoor-section.png)" }}
+          style={{ backgroundImage: "url(/images/home-3.png)" }}
         />
         <div className="reveal-right flex flex-col items-start text-left">
           <p className="text-xs tracking-widest text-gold font-semibold mb-3">OUTDOOR LIGHTS</p>

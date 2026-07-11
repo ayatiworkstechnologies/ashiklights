@@ -10,7 +10,7 @@ function Slider({ before, after }: { before: string, after: string }) {
     <div className="relative h-64 md:h-[400px] w-full rounded-2xl overflow-hidden border border-border-gold/30 group shadow-2xl">
       {/* Before Image (Background) */}
       <div
-        className="absolute inset-0 bg-cover bg-center grayscale brightness-[0.4]"
+        className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${before})` }}
       />
       <span className="absolute top-4 left-4 z-10 px-3 py-1 border border-gold-light/40 rounded-full bg-surface/80 backdrop-blur-md text-[10px] md:text-xs tracking-widest text-white shadow-lg">BEFORE</span>
@@ -62,13 +62,13 @@ export function BeforeAfter() {
         {[
           [
             "Living Room Transformation",
-            "/images/crystal-chandelier.png",
-            "/images/hero-chandelier.png",
+            "/images/be.png",
+            "/images/af.png",
           ],
           [
             "Villa Facade Illumination",
-            "/images/hero-chandelier.png",
-            "/images/outdoor-lights.png",
+            "/images/be-1.png",
+            "/images/af-1.png",
           ],
         ].map(([title, before, after]) => (
           <article key={title} className="flex flex-col gap-6 reveal">

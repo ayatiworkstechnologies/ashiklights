@@ -15,7 +15,6 @@ import { ShowroomVisit } from "@/components/sections/ShowroomVisit";
 import { Testimonial } from "@/components/sections/Testimonial";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ConsultationModal } from "@/components/ui/ConsultationModal";
-import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -132,8 +131,6 @@ export default function Home() {
         onClose={closeModal}
         onSubmit={handleFormSubmit}
       />
-      
-      <ScrollToTop />
     </main>
   );
 }

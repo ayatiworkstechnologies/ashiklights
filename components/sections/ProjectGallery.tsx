@@ -16,42 +16,42 @@ const projects: Project[] = [
   {
     id: "p1",
     title: "Double-Height Crystal Cascade",
-    image: "/images/hero-chandelier.png",
+    image: "/images/p-01.png",
     categories: ["Chandeliers", "High Ceiling", "Residential"],
     location: "Boat Club Road, Chennai"
   },
   {
     id: "p2",
     title: "Modern Minimalist Dining",
-    image: "/images/crystal-chandelier.png",
+    image: "/images/p-02.png",
     categories: ["Chandeliers", "Residential"],
     location: "ECR, Chennai"
   },
   {
     id: "p3",
     title: "Luxury Villa Facade",
-    image: "/images/outdoor-lights.png",
+    image: "/images/p-03.png",
     categories: ["Outdoor", "Residential"],
     location: "Neelankarai"
   },
   {
     id: "p4",
     title: "Grand Lobby Statement",
-    image: "/images/hero-chandelier.png",
+    image: "/images/p-04.png",
     categories: ["Chandeliers", "High Ceiling", "Commercial"],
     location: "Guindy"
   },
   {
     id: "p5",
     title: "Boutique Hotel Garden",
-    image: "/images/outdoor-lights.png",
+    image: "/images/p-05.png",
     categories: ["Outdoor", "Commercial"],
     location: "Nungambakkam"
   },
   {
     id: "p6",
     title: "Spiral Staircase Elegance",
-    image: "/images/crystal-chandelier.png",
+    image: "/images/p-06.png",
     categories: ["Chandeliers", "Residential"],
     location: "Anna Nagar"
   }

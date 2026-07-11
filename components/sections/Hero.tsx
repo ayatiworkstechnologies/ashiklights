@@ -9,10 +9,14 @@ interface HeroProps {
   onResetSubmit: () => void;
 }
 
+const TAMIL_NADU_CITIES = [
+  "Chennai", "Coimbatore", "Madurai", "Tiruchirappalli", "Salem", "Tirunelveli", "Tiruppur", "Erode", "Vellore", "Thoothukudi", "Dindigul", "Thanjavur", "Nagercoil", "Hosur", "Avadi", "Kanchipuram", "Karur", "Cuddalore", "Tambaram", "Kumbakonam", "Sivakasi", "Karaikudi", "Namakkal", "Pudukkottai", "Tiruvannamalai", "Ambur", "Ambasamudram", "Arakkonam", "Arani", "Ariyalur", "Aruppukkottai", "Attur", "Bhavani", "Bodinayakanur", "Chengalpattu", "Chidambaram", "Chinnamanur", "Coonoor", "Cumbum", "Devakottai", "Dharapuram", "Dharmapuri", "Gobichettipalayam", "Gudalur", "Gudiyatham", "Harur", "Jayankondam", "Kallakurichi", "Kayalpattinam", "Kodaikanal", "Komarapalayam", "Kotagiri", "Krishnagiri", "Kulithalai", "Kuzhithurai", "Mannargudi", "Mayiladuthurai", "Melur", "Mettupalayam", "Mettur", "Nagapattinam", "Neyveli", "Nilakottai", "Oddanchatram", "Palani", "Palladam", "Paramakudi", "Pattukkottai", "Perambalur", "Periyakulam", "Pollachi", "Poonamallee", "Rasipuram", "Ranipet", "Ramanathapuram", "Sathyamangalam", "Shenkottai", "Sirkazhi", "Srivilliputhur", "Tenkasi", "Theni", "Thiruthuraipoondi", "Tiruchengode", "Tirupattur", "Tiruttani", "Tiruvallur", "Tiruvarur", "Udumalaipettai", "Udhagamandalam", "Ulundurpet", "Usilampatti", "Vandavasi", "Vaniyambadi", "Viluppuram", "Virudhunagar", "Walajapet", "Yercaud"
+];
+
 export function Hero({ isSubmitted, isSubmitting, onOpenModal, onSubmit, onResetSubmit }: HeroProps) {
   return (
-    <section className="relative min-h-[90vh] grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] items-center gap-9 pt-24 pb-12 px-5 md:px-[6%] md:pl-[4.2%] bg-[url('/images/hero-chandelier.png')] bg-[62%_center] md:bg-[center_43%] bg-cover bg-no-repeat overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-[rgba(7,9,10,0.95)] via-[rgba(7,9,10,0.7)] to-[rgba(7,9,10,0.2)]" />
+    <section className="relative min-h-[90vh] grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] items-center gap-9 pt-24 pb-12 px-5 md:px-[6%] md:pl-[4.2%] bg-[url('/images/banner.png')] bg-[62%_center] md:bg-[center_43%] bg-cover bg-no-repeat overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10" />
       
       <div className="relative z-10 text-center md:text-left reveal-stagger">
         <p className="reveal-left text-xs tracking-[0.3em] text-gold font-semibold mb-6 uppercase">Luxury Lighting Since 2016</p>
@@ -47,7 +51,7 @@ export function Hero({ isSubmitted, isSubmitting, onOpenModal, onSubmit, onReset
         ) : (
           <>
             <h2 className="font-playfair font-medium text-3xl leading-tight text-center mb-6 text-white">
-              Find the Right Chandelier
+              Enquire Now
             </h2>
             <div className="space-y-3">
               <label className="h-12 px-4 flex gap-3 items-center text-text-muted border border-white/10 rounded-xl bg-white/5 transition-colors focus-within:border-gold/50 focus-within:bg-white/10">
@@ -64,20 +68,12 @@ export function Hero({ isSubmitted, isSubmitting, onOpenModal, onSubmit, onReset
               </label>
               <label className="h-12 px-4 flex gap-3 items-center text-text-muted border border-white/10 rounded-xl bg-white/5 transition-colors focus-within:border-gold/50 focus-within:bg-white/10">
                 <Icon name="pin" />
-                <select name="city" className="flex-1 w-full bg-transparent border-none outline-none text-white text-sm cursor-pointer" defaultValue="" required>
-                  <option className="bg-surface text-white" value="" disabled>Select City</option>
-                  <option className="bg-surface text-white">Chennai</option>
-                  <option className="bg-surface text-white">Coimbatore</option>
-                  <option className="bg-surface text-white">Madurai</option>
-                  <option className="bg-surface text-white">Tiruchirappalli</option>
-                  <option className="bg-surface text-white">Salem</option>
-                  <option className="bg-surface text-white">Tirunelveli</option>
-                  <option className="bg-surface text-white">Tiruppur</option>
-                  <option className="bg-surface text-white">Erode</option>
-                  <option className="bg-surface text-white">Vellore</option>
-                  <option className="bg-surface text-white">Thoothukudi</option>
-                  <option className="bg-surface text-white">Other</option>
-                </select>
+                <input name="city" list="tn-cities-hero" className="flex-1 w-full bg-transparent border-none outline-none text-white text-sm placeholder:text-text-muted" required placeholder="City / District" autoComplete="off" />
+                <datalist id="tn-cities-hero">
+                  {TAMIL_NADU_CITIES.map(city => (
+                    <option key={city} value={city} />
+                  ))}
+                </datalist>
               </label>
               <label className="h-12 px-4 flex gap-3 items-center text-text-muted border border-white/10 rounded-xl bg-white/5 transition-colors focus-within:border-gold/50 focus-within:bg-white/10">
                 <Icon name="home" />

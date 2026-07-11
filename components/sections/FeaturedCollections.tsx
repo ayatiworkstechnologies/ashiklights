@@ -5,31 +5,31 @@ import { Icon } from "../ui/Icon";
 const collections = [
   { 
     title: "Crystal Elegance", 
-    image: "/images/crystal-chandelier.png", 
+    image: "/images/fu-01.png", 
     desc: "Timeless brilliance for grand spaces.", 
     spanClass: "md:col-span-2 md:row-span-2 min-h-[400px] md:min-h-[500px]" 
   },
   { 
     title: "Modern Minimal", 
-    image: "/images/hero-chandelier.png", 
+    image: "/images/fu-02.png", 
     desc: "Sleek lines and understated luxury.", 
     spanClass: "md:col-span-1 md:row-span-1 min-h-[240px]" 
   },
   { 
     title: "Contemporary", 
-    image: "/images/outdoor-lights.png", 
+    image: "/images/fu-03.png", 
     desc: "Bold geometries that captivate.", 
     spanClass: "md:col-span-1 md:row-span-1 min-h-[240px]" 
   },
   { 
     title: "Classic Luxury", 
-    image: "/images/hero-chandelier.png", 
+    image: "/images/fu-04.png", 
     desc: "Ornate details for opulent interiors.", 
     spanClass: "md:col-span-1 md:row-span-1 min-h-[240px]" 
   },
   { 
     title: "Linear & Spiral Designs", 
-    image: "/images/crystal-chandelier.png", 
+    image: "/images/fu-05.png", 
     desc: "Perfectly tailored for sweeping staircases.", 
     spanClass: "md:col-span-2 md:row-span-1 min-h-[240px]" 
   },

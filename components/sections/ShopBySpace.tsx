@@ -3,12 +3,12 @@ import Link from "next/link";
 import { Icon } from "../ui/Icon";
 
 const spaces = [
-  { title: "Living Room", image: "/images/crystal-chandelier.png", desc: "Statement chandeliers that anchor your gathering spaces" },
-  { title: "Dining Room", image: "/images/hero-chandelier.png", desc: "Elegant suspensions for perfect ambiance" },
-  { title: "Double-Height", image: "/images/hero-chandelier.png", desc: "Cascading installations for grand volumes" },
-  { title: "Staircase", image: "/images/crystal-chandelier.png", desc: "Sweeping spirals that follow your architecture" },
-  { title: "Villa Facade", image: "/images/outdoor-lights.png", desc: "Architectural lighting for exterior grandeur" },
-  { title: "Garden & Pathway", image: "/images/outdoor-lights.png", desc: "Subtle illuminations for landscapes" },
+  { title: "Living Room", image: "/images/shop-01.png", desc: "Statement chandeliers that anchor your gathering spaces" },
+  { title: "Dining Room", image: "/images/shop-02.png", desc: "Elegant suspensions for perfect ambiance" },
+  { title: "Double-Height", image: "/images/shop-03.png", desc: "Cascading installations for grand volumes" },
+  { title: "Staircase", image: "/images/shop-04.png", desc: "Sweeping spirals that follow your architecture" },
+  { title: "Villa Facade", image: "/images/shop-05.png", desc: "Architectural lighting for exterior grandeur" },
+  { title: "Garden & Pathway", image: "/images/shop-06.png", desc: "Subtle illuminations for landscapes" },
 ];
 
 interface ShopBySpaceProps {
