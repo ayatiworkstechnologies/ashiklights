@@ -17,42 +17,42 @@ const projects: Project[] = [
     id: "p1",
     title: "Double-Height Crystal Cascade",
     image: "/images/p-01.png",
-    categories: ["Chandeliers", "High Ceiling", "Residential"],
+    categories: ["Chandeliers"],
     location: "Boat Club Road, Chennai"
   },
   {
     id: "p2",
     title: "Modern Minimalist Dining",
     image: "/images/p-02.png",
-    categories: ["Chandeliers", "Residential"],
+    categories: ["Chandeliers"],
     location: "ECR, Chennai"
   },
   {
     id: "p3",
     title: "Luxury Villa Facade",
     image: "/images/p-03.png",
-    categories: ["Outdoor", "Residential"],
+    categories: ["Outdoor"],
     location: "Neelankarai"
   },
   {
     id: "p4",
     title: "Grand Lobby Statement",
     image: "/images/p-04.png",
-    categories: ["Chandeliers", "High Ceiling", "Commercial"],
+    categories: ["High Ceiling"],
     location: "Guindy"
   },
   {
     id: "p5",
     title: "Boutique Hotel Garden",
     image: "/images/p-05.png",
-    categories: ["Outdoor", "Commercial"],
+    categories: ["Outdoor"],
     location: "Nungambakkam"
   },
   {
     id: "p6",
     title: "Spiral Staircase Elegance",
     image: "/images/p-06.png",
-    categories: ["Chandeliers", "Residential"],
+    categories: ["High Ceiling"],
     location: "Anna Nagar"
   }
 ];
@@ -79,8 +79,6 @@ export function ProjectGallery({ filter, setFilter, onOpenModal }: ProjectGaller
           "Chandeliers",
           "High Ceiling",
           "Outdoor",
-          "Residential",
-          "Commercial",
         ].map((x) => (
           <button
             className={`flex-shrink-0 px-5 py-2 md:px-6 md:py-2.5 border rounded-full text-xs md:text-sm tracking-wide font-medium transition-all duration-300 ${
