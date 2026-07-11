@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import "./ashik-lights.css";
-
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Ashik Lights | Premium Chandeliers & Luxury Lighting",
