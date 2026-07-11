@@ -6,7 +6,7 @@ interface ConsultationModalProps {
   isSubmitted: boolean;
   isSubmitting: boolean;
   onClose: () => void;
-  onSubmit: (e: React.FormEvent) => void;
+  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
 export function ConsultationModal({ isOpen, isSubmitted, isSubmitting, onClose, onSubmit }: ConsultationModalProps) {

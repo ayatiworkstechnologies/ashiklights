@@ -16,12 +16,14 @@ import { Testimonial } from "@/components/sections/Testimonial";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ConsultationModal } from "@/components/ui/ConsultationModal";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [filter, setFilter] = useState("All");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const scrollRef = useScrollReveal();
+  const router = useRouter();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -49,6 +51,7 @@ export default function Home() {
       
       if (response.ok) {
         setIsSubmitted(true);
+        router.push("/thank-you");
       } else {
         console.error("Failed to submit lead");
       }

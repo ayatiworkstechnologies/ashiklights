@@ -5,7 +5,7 @@ interface HeroProps {
   isSubmitted: boolean;
   isSubmitting: boolean;
   onOpenModal: (e: React.MouseEvent) => void;
-  onSubmit: (e: React.FormEvent) => void;
+  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
   onResetSubmit: () => void;
 }
 
