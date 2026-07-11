@@ -40,11 +40,10 @@ export default function Home() {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch("https://api.ayatiworks.com/api/v1/public/ashik-lights/leads/records", {
+      const response = await fetch("/api/leads", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "X-API-Key": "8d6158982967e86fd9ff3219c057e7d62e0308f19984047ccefc55af06d1903f",
         },
         body: JSON.stringify({ data }),
       });
