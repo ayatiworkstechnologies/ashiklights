@@ -4,15 +4,15 @@ import { Icon } from "../ui/Icon";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 flex h-16 md:h-20 items-center justify-between px-4 md:px-8 bg-background/80 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
-      <Link className="flex items-center transition-opacity hover:opacity-90" href="/" aria-label="Ashik Lights home">
-        <div className="relative w-[140px] h-8 sm:w-[180px] sm:h-10 md:w-[220px] md:h-12">
+    <header className="sticky top-0 z-50 flex h-24 sm:h-28 md:h-32 items-center justify-center md:justify-between px-4 md:px-8 bg-background/80 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+      <Link className="flex items-center transition-opacity hover:opacity-90 mx-auto md:mx-0" href="/" aria-label="Ashik Lights home">
+        <div className="relative w-[260px] h-[64px] sm:w-[300px] sm:h-[80px] md:w-[320px] md:h-[88px] lg:w-[360px] lg:h-[96px]">
            <Image
             src="/logo.png"
             alt="Ashik Lights"
             fill
             priority
-            className="object-contain object-left"
+            className="object-contain object-center md:object-left brightness-0 invert"
           />
         </div>
       </Link>
@@ -29,7 +29,7 @@ export function Header() {
         ))}
       </nav>
 
-      <div className="flex gap-3 items-center">
+      <div className="hidden md:flex gap-3 items-center">
         <Link className="h-9 md:h-10 px-3 md:px-4 rounded-full inline-flex items-center justify-center gap-2 text-sm font-medium transition-all hover:bg-white/5 border border-white/10 text-white" href="tel:+918754860555">
           <Icon name="phone" />
           <span className="hidden lg:inline">Call Now</span>
