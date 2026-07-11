@@ -39,20 +39,22 @@ export function Expertise() {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6 md:gap-8 reveal-stagger">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 reveal-stagger">
         {expertiseItems.map(({ icon, title, desc }) => (
           <article 
             key={title} 
-            className="reveal-scale w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] flex flex-col items-center text-center p-8 md:p-10 border border-border-dark rounded-2xl bg-gradient-to-b from-surface to-background/50 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:border-gold/40 hover:shadow-[0_10px_40px_rgba(215,169,79,0.15)] group"
+            className="reveal-scale flex items-center text-left p-4 md:p-5 border border-border-dark rounded-xl bg-gradient-to-b from-surface to-background/50 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-lg group"
           >
-            <div className="relative mb-6">
-              <div className="absolute inset-0 bg-gold/20 blur-xl rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <b className="relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-surface-light border border-gold/30 text-gold text-2xl md:text-3xl transition-transform duration-500 group-hover:scale-110 shadow-lg group-hover:shadow-[0_0_20px_rgba(215,169,79,0.3)]">
+            <div className="relative flex-shrink-0 mr-4 md:mr-5">
+              <div className="absolute inset-0 bg-gold/10 blur-lg rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <b className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-surface-light border border-gold/30 text-gold text-xl transition-transform duration-500 group-hover:scale-110 shadow-sm">
                 <Icon name={icon} />
               </b>
             </div>
-            <h3 className="text-lg md:text-xl font-playfair font-normal text-white mb-3 group-hover:text-gold-light transition-colors duration-300">{title}</h3>
-            <p className="text-sm text-text-muted leading-relaxed">{desc}</p>
+            <div>
+              <h3 className="text-base md:text-lg font-playfair font-medium text-white mb-1 group-hover:text-gold-light transition-colors duration-300">{title}</h3>
+              <p className="text-xs text-text-muted leading-relaxed line-clamp-2 md:line-clamp-none">{desc}</p>
+            </div>
           </article>
         ))}
       </div>

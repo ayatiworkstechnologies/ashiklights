@@ -97,9 +97,9 @@ export default function Home() {
       <div className="reveal">
         <ShopBySpace onOpenModal={openModal} />
       </div>
-      <div className="reveal">
+      {/* <div className="reveal">
         <FeaturedCollections onOpenModal={openModal} />
-      </div>
+      </div> */}
       <div className="reveal">
         <BeforeAfter />
       </div>
@@ -114,14 +114,15 @@ export default function Home() {
         />
       </div>
       <div className="reveal">
-        <ShowroomVisit onOpenModal={openModal} />
-      </div>
-      <div className="reveal">
         <Testimonial />
       </div>
       <div className="reveal">
-        <FinalCTA onOpenModal={openModal} />
+        <ShowroomVisit onOpenModal={openModal} />
       </div>
+      
+      {/* <div className="reveal">
+        <FinalCTA onOpenModal={openModal} />
+      </div> */}
       <Footer />
       
       <ConsultationModal 

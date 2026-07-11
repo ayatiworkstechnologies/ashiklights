@@ -30,7 +30,7 @@ const projects: Project[] = [
   {
     id: "p3",
     title: "Luxury Villa Facade",
-    image: "/images/p-03.png",
+    image: "/images/shop-05.png",
     categories: ["Outdoor"],
     location: "Neelankarai"
   },
@@ -51,7 +51,7 @@ const projects: Project[] = [
   {
     id: "p6",
     title: "Spiral Staircase Elegance",
-    image: "/images/p-06.png",
+    image: "/images/shop-04.png",
     categories: ["High Ceiling"],
     location: "Anna Nagar"
   }
@@ -70,7 +70,7 @@ export function ProjectGallery({ filter, setFilter, onOpenModal }: ProjectGaller
 
   return (
     <section className="pt-20 px-4 md:px-[6%]">
-      <Title>Project Gallery</Title>
+      <Title> Gallery</Title>
       
       {/* Filter Buttons */}
       <div className="flex overflow-x-auto whitespace-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] justify-start md:justify-center gap-3 md:gap-4 mb-10 pb-2 -mx-4 px-4 md:mx-0 md:px-0">
@@ -115,9 +115,9 @@ export function ProjectGallery({ filter, setFilter, onOpenModal }: ProjectGaller
               </span>
 
               <div className="absolute bottom-0 left-0 right-0 p-6 z-10 transform md:translate-y-6 md:group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-gold-light/80 text-xs tracking-widest uppercase mb-2 flex items-center gap-1.5 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 md:delay-100">
+                {/* <p className="text-gold-light/80 text-xs tracking-widest uppercase mb-2 flex items-center gap-1.5 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 md:delay-100">
                   <Icon name="pin" className="w-3 h-3" /> {project.location}
-                </p>
+                </p> */}
                 <h3 className="font-playfair text-xl md:text-2xl font-normal text-white mb-3 drop-shadow-md">{project.title}</h3>
                 <Link className="inline-flex text-sm text-gold font-medium items-center gap-2 hover:text-white transition-colors" href="#consultation" onClick={onOpenModal}>
                   Get a Similar Design <Icon name="arrowRight" className="w-4 h-4 transition-transform md:group-hover:translate-x-1" />
