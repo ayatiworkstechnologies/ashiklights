@@ -6,7 +6,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 flex h-16 md:h-20 items-center justify-between px-4 md:px-8 bg-background/80 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
       <Link className="flex items-center transition-opacity hover:opacity-90" href="/" aria-label="Ashik Lights home">
-        <div className="relative w-[180px] h-10 md:w-[220px] md:h-12">
+        <div className="relative w-[140px] h-8 sm:w-[180px] sm:h-10 md:w-[220px] md:h-12">
            <Image
             src="/logo.png"
             alt="Ashik Lights"
