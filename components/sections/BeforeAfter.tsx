@@ -62,13 +62,13 @@ export function BeforeAfter() {
         {[
           [
             "Living Room Transformation",
-            "/images/be.png",
-            "/images/af.png",
+            "/images/be-1.png",
+            "/images/af-1.png",
           ],
           [
             "Villa Facade Illumination",
-            "/images/be-1.png",
-            "/images/af-1.png",
+            "/images/be.png",
+            "/images/af.png",
           ],
         ].map(([title, before, after]) => (
           <article key={title} className="flex flex-col gap-6 reveal">

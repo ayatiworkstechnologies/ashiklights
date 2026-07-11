@@ -65,22 +65,22 @@ export function FeaturedCollections({ onOpenModal }: FeaturedCollectionsProps) {
             </span>
 
             {/* Content Container */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10 flex flex-col justify-end transform transition-transform duration-500 group-hover:-translate-y-2">
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10 flex flex-col justify-end transform transition-transform duration-500 md:group-hover:-translate-y-2">
               <h3 className="font-playfair text-2xl md:text-3xl font-normal text-white mb-2 drop-shadow-md">
                 {item.title}
               </h3>
               
               <div className="overflow-hidden">
-                <p className="text-sm md:text-base text-text-muted mb-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                <p className="text-sm md:text-base text-text-muted mb-4 transform md:translate-y-4 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 md:delay-100">
                   {item.desc}
                 </p>
                 
                 <Link 
-                  className="inline-flex text-sm text-gold font-medium items-center gap-2 hover:text-white transition-colors uppercase tracking-widest transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-500 delay-150" 
+                  className="inline-flex text-sm text-gold font-medium items-center gap-2 hover:text-white transition-colors uppercase tracking-widest transform md:translate-y-4 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 duration-500 md:delay-150" 
                   href="#consultation" 
                   onClick={onOpenModal}
                 >
-                  Enquire Collection <Icon name="arrowRight" className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  Enquire Collection <Icon name="arrowRight" className="w-4 h-4 transition-transform md:group-hover:translate-x-1" />
                 </Link>
               </div>
             </div>

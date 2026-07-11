@@ -18,7 +18,7 @@ export function Header() {
       </Link>
       
       <nav className="hidden md:flex items-center gap-8">
-        {["Chandeliers", "High Ceiling", "Outdoor Lights"].map((item) => (
+        {["Chandeliers", "High Ceiling Chandeliers", "Outdoor Lights"].map((item) => (
           <Link 
             key={item}
             className="text-sm font-medium text-text-secondary hover:text-white transition-colors relative after:absolute after:-bottom-1.5 after:left-0 after:h-[1px] after:w-0 after:bg-gold hover:after:w-full after:transition-all after:duration-300 pb-1" 

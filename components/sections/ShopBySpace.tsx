@@ -45,18 +45,18 @@ export function ShopBySpace({ onOpenModal }: ShopBySpaceProps) {
             
             {/* Content Overlay */}
             <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-10">
-              <div className="transform transition-transform duration-500 group-hover:-translate-y-2">
+              <div className="transform transition-transform duration-500 md:group-hover:-translate-y-2">
                 <h3 className="font-playfair text-2xl md:text-3xl font-normal text-white mb-2 drop-shadow-md">
                   {title}
                 </h3>
                 
                 <div className="overflow-hidden">
-                  <p className="text-sm md:text-base text-text-muted mb-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 line-clamp-2">
+                  <p className="text-sm md:text-base text-text-muted mb-4 transform md:translate-y-4 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 md:delay-100 line-clamp-2">
                     {desc}
                   </p>
                   
-                  <span className="inline-flex text-xs md:text-sm text-gold font-medium items-center gap-2 uppercase tracking-widest transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-150">
-                    View Designs <Icon name="arrowRight" className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  <span className="inline-flex text-xs md:text-sm text-gold font-medium items-center gap-2 uppercase tracking-widest transform md:translate-y-4 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 md:delay-150">
+                    View Designs <Icon name="arrowRight" className="w-4 h-4 transition-transform md:group-hover:translate-x-1" />
                   </span>
                 </div>
               </div>

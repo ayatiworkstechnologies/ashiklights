@@ -73,7 +73,7 @@ export function ProjectGallery({ filter, setFilter, onOpenModal }: ProjectGaller
       <Title>Project Gallery</Title>
       
       {/* Filter Buttons */}
-      <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-10">
+      <div className="flex overflow-x-auto whitespace-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] justify-start md:justify-center gap-3 md:gap-4 mb-10 pb-2 -mx-4 px-4 md:mx-0 md:px-0">
         {[
           "All",
           "Chandeliers",
@@ -83,7 +83,7 @@ export function ProjectGallery({ filter, setFilter, onOpenModal }: ProjectGaller
           "Commercial",
         ].map((x) => (
           <button
-            className={`px-5 py-2 md:px-6 md:py-2.5 border rounded-full text-xs md:text-sm tracking-wide font-medium transition-all duration-300 ${
+            className={`flex-shrink-0 px-5 py-2 md:px-6 md:py-2.5 border rounded-full text-xs md:text-sm tracking-wide font-medium transition-all duration-300 ${
               filter === x 
               ? 'border-gold text-background bg-gold shadow-[0_0_15px_rgba(215,169,79,0.4)] scale-105' 
               : 'border-border text-text-muted hover:border-gold hover:text-gold'
@@ -116,13 +116,13 @@ export function ProjectGallery({ filter, setFilter, onOpenModal }: ProjectGaller
                 {project.categories[0]}
               </span>
 
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-10 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-gold-light/80 text-xs tracking-widest uppercase mb-2 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+              <div className="absolute bottom-0 left-0 right-0 p-6 z-10 transform md:translate-y-6 md:group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-gold-light/80 text-xs tracking-widest uppercase mb-2 flex items-center gap-1.5 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 md:delay-100">
                   <Icon name="pin" className="w-3 h-3" /> {project.location}
                 </p>
                 <h3 className="font-playfair text-xl md:text-2xl font-normal text-white mb-3 drop-shadow-md">{project.title}</h3>
                 <Link className="inline-flex text-sm text-gold font-medium items-center gap-2 hover:text-white transition-colors" href="#consultation" onClick={onOpenModal}>
-                  Get a Similar Design <Icon name="arrowRight" className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  Get a Similar Design <Icon name="arrowRight" className="w-4 h-4 transition-transform md:group-hover:translate-x-1" />
                 </Link>
               </div>
             </motion.article>
