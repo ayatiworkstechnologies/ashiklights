@@ -71,12 +71,12 @@ export function Testimonial() {
         <h2 className="font-playfair text-3xl md:text-5xl mb-4">What Our Clients Say</h2>
         <div className="flex items-center justify-center gap-2 mb-2">
           <span className="font-bold text-xl">4.6</span>
-          <div className="flex text-gold text-sm gap-0.5">
+          <div className="flex gap-1 text-base text-gold drop-shadow-[0_0_6px_rgba(215,169,79,0.55)]">
             {[...Array(5)].map((_, i) => (
-              <span key={i}><Icon name="star" /></span>
+              <span key={i}><Icon name="starFilled" /></span>
             ))}
           </div>
-          <span className="text-text-muted text-sm ml-2">(300+ Google Reviews)</span>
+          <span className="text-text-muted text-sm ml-2">(400+ Google Reviews)</span>
         </div>
       </div>
       
@@ -98,10 +98,10 @@ export function Testimonial() {
                 </div>
                 <div>
                   <h3 className="font-medium text-foreground">{review.name}</h3>
-                  <div className="flex text-gold text-xs gap-0.5 mt-1">
+                  <div className="mt-1 flex gap-1 text-xs text-gold drop-shadow-[0_0_5px_rgba(215,169,79,0.45)]">
                     {[...Array(5)].map((_, idx) => (
-                      <span key={idx} className={idx < review.rating ? "opacity-100" : "opacity-30"}>
-                        <Icon name="star" />
+                      <span key={idx} className={idx < review.rating ? "opacity-100" : "opacity-35"}>
+                        <Icon name={idx < review.rating ? "starFilled" : "star"} />
                       </span>
                     ))}
                   </div>
@@ -111,7 +111,7 @@ export function Testimonial() {
                 </div>
               </div>
               <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-4">
-                "{review.review}"
+                &ldquo;{review.review}&rdquo;
               </p>
               <span className="text-xs text-text-muted">{review.date}</span>
             </article>

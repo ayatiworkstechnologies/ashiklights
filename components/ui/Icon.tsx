@@ -16,7 +16,7 @@ import {
   FiArrowDown,
   FiMail,
 } from "react-icons/fi";
-import { FaWhatsapp, FaGoogle } from "react-icons/fa";
+import { FaWhatsapp, FaGoogle, FaStar } from "react-icons/fa";
 
 const iconMap: Record<string, IconType> = {
   mail: FiMail,
@@ -29,6 +29,7 @@ const iconMap: Record<string, IconType> = {
   wallet: FiShoppingBag,
   calendar: FiCalendar,
   star: FiStar,
+  starFilled: FaStar,
   showroom: FiShoppingBag,
   diamond: FiMaximize,
   measure: FiTool,

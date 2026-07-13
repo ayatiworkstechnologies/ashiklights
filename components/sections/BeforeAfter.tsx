@@ -38,10 +38,10 @@ function Slider({ before, after, title }: SliderProps) {
         />
       </div>
 
-      <span className="absolute left-3 top-3 z-10 rounded-full border border-white/15 bg-black/60 px-3 py-1.5 text-[10px] font-semibold tracking-[0.18em] text-white shadow-lg backdrop-blur-md md:left-4 md:top-4 md:text-xs">
+      <span className="absolute left-3 top-3 z-10 rounded-full border border-gold-light/35 bg-black/60 px-3 py-1.5 text-[10px] font-semibold tracking-[0.18em] text-gold-light shadow-lg backdrop-blur-md md:left-4 md:top-4 md:text-xs">
         AFTER
       </span>
-      <span className="absolute right-3 top-3 z-10 rounded-full border border-gold-light/35 bg-black/60 px-3 py-1.5 text-[10px] font-semibold tracking-[0.18em] text-gold-light shadow-lg backdrop-blur-md md:right-4 md:top-4 md:text-xs">
+      <span className="absolute right-3 top-3 z-10 rounded-full border border-white/15 bg-black/60 px-3 py-1.5 text-[10px] font-semibold tracking-[0.18em] text-white shadow-lg backdrop-blur-md md:right-4 md:top-4 md:text-xs">
         BEFORE
       </span>
 
