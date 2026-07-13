@@ -31,21 +31,21 @@ export function Header() {
 
       <div className="hidden shrink-0 items-center gap-2 md:flex lg:gap-3">
         <Link
-          className="inline-flex h-10 w-10 items-center justify-center gap-2 rounded-full border border-white/10 p-0 text-sm font-medium text-white transition-all hover:bg-white/5 lg:w-auto lg:px-4"
+          className="inline-flex h-10 w-10 items-center justify-center gap-2 rounded-full border border-white/10 p-0 text-sm font-medium text-white transition-all hover:bg-white/5 xl:w-auto xl:px-4"
           href="tel:+918754860555"
           aria-label="Call Ashik Lights"
         >
           <Icon name="phone" />
-          <span className="hidden lg:inline">Call Now</span>
+          <span className="hidden xl:inline">Call Now</span>
         </Link>
         <Link
-          className="group relative inline-flex h-10 w-10 items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-gold-light via-gold to-gold-dark p-0 text-sm font-semibold text-background shadow-[0_4px_14px_rgba(215,169,79,0.3)] transition-all hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(215,169,79,0.4)] lg:w-auto lg:px-5"
+          className="group relative inline-flex h-10 w-10 items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-gold-light via-gold to-gold-dark p-0 text-sm font-semibold text-background shadow-[0_4px_14px_rgba(215,169,79,0.3)] transition-all hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(215,169,79,0.4)] xl:w-auto xl:px-5"
           href="https://wa.me/918754860555"
           aria-label="Chat with Ashik Lights on WhatsApp"
         >
           <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
           <Icon name="whatsapp" className="relative z-10" />
-          <span className="relative z-10 hidden lg:inline">WhatsApp</span>
+          <span className="relative z-10 hidden xl:inline">WhatsApp</span>
         </Link>
       </div>
     </header>
