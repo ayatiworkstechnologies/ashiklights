@@ -19,7 +19,7 @@ export function Hero({ isSubmitted, isSubmitting, onOpenModal, onSubmit, onReset
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10" />
       
       <div className="relative z-10 text-center md:text-left reveal-stagger">
-        <p className="reveal-left text-xs tracking-[0.3em] text-gold font-semibold mb-6 uppercase">Luxury Lighting Since 2016</p>
+        {/* <p className="reveal-left text-xs tracking-[0.3em] text-gold font-semibold mb-6 uppercase">Luxury Lighting Since 2016</p> */}
         <h1 className="reveal-left reveal-delay-1 font-playfair font-medium text-4xl sm:text-5xl md:text-[4.5rem] leading-[1.1] text-foreground mb-6 drop-shadow-lg">
           Premium Chandeliers
           <br />

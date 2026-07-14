@@ -15,23 +15,23 @@ function Slider({ before, after, title }: SliderProps) {
 
   return (
     <div className="group relative aspect-[3/2] w-full overflow-hidden rounded-xl border border-border-gold/40 bg-surface shadow-[0_20px_55px_rgba(0,0,0,0.35)] ring-offset-2 ring-offset-background transition-shadow focus-within:ring-2 focus-within:ring-gold/70 md:rounded-2xl">
-      {/* Before stays on the right as the base image. */}
+      {/* After stays on the right as the base image. */}
       <Image
-        src={before}
-        alt={`${title} before lighting installation`}
+        src={after}
+        alt={`${title} after lighting installation`}
         fill
         sizes="(min-width: 768px) 44vw, 92vw"
         className="object-cover"
       />
 
-      {/* After is revealed from the left as the handle moves. */}
+      {/* Before is shown on the left up to the draggable divider. */}
       <div
         className="absolute inset-0 overflow-hidden shadow-[inset_-12px_0_24px_rgba(0,0,0,0.22)]"
         style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
       >
         <Image
-          src={after}
-          alt={`${title} after lighting installation`}
+          src={before}
+          alt={`${title} before lighting installation`}
           fill
           sizes="(min-width: 768px) 44vw, 92vw"
           className="object-cover"
@@ -39,10 +39,10 @@ function Slider({ before, after, title }: SliderProps) {
       </div>
 
       <span className="absolute left-3 top-3 z-10 rounded-full border border-gold-light/35 bg-black/60 px-3 py-1.5 text-[10px] font-semibold tracking-[0.18em] text-gold-light shadow-lg backdrop-blur-md md:left-4 md:top-4 md:text-xs">
-        AFTER
+        BEFORE
       </span>
       <span className="absolute right-3 top-3 z-10 rounded-full border border-white/15 bg-black/60 px-3 py-1.5 text-[10px] font-semibold tracking-[0.18em] text-white shadow-lg backdrop-blur-md md:right-4 md:top-4 md:text-xs">
-        BEFORE
+        AFTER
       </span>
 
       <input
@@ -51,18 +51,31 @@ function Slider({ before, after, title }: SliderProps) {
         max="100"
         value={sliderPos}
         aria-label={`Compare before and after for ${title}`}
-        aria-valuetext={`${sliderPos}% after, ${100 - sliderPos}% before`}
+        aria-valuetext={`${sliderPos}% before, ${100 - sliderPos}% after`}
         onChange={(event) => setSliderPos(Number(event.target.value))}
-        className="absolute inset-0 z-20 h-full w-full cursor-ew-resize touch-pan-y opacity-0"
+        className="peer absolute inset-0 z-20 h-full w-full cursor-ew-resize touch-pan-y opacity-0"
       />
 
       <div
-        className="pointer-events-none absolute bottom-0 top-0 z-10 w-0.5 bg-gold shadow-[0_0_18px_rgba(215,169,79,0.9)]"
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 top-0 z-10 w-0.5 bg-gradient-to-b from-gold-light via-gold to-gold-dark shadow-[0_0_22px_rgba(215,169,79,1)]"
         style={{ left: `${sliderPos}%`, transform: "translateX(-50%)" }}
       >
-        <div className="absolute left-1/2 top-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-gold bg-surface-light text-gold shadow-xl transition-transform duration-300 group-hover:scale-110 md:h-11 md:w-11 lg:h-12 lg:w-12">
-          <Icon name="arrowRight" className="absolute left-1.5 h-4 w-4 rotate-180 opacity-80 md:left-2 md:h-5 md:w-5" />
-          <Icon name="arrowRight" className="absolute right-1.5 h-4 w-4 opacity-80 md:right-2 md:h-5 md:w-5" />
+        <span className="absolute left-1/2 top-1/2 h-14 w-28 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/25 blur-xl motion-safe:animate-pulse peer-active:bg-gold/45" />
+        <span className="absolute left-1/2 top-1/2 h-11 w-[90px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold/60 opacity-70 motion-safe:animate-ping md:h-12 md:w-[100px]" />
+
+        <div className="absolute left-1/2 top-1/2 flex h-10 w-[84px] -translate-x-1/2 -translate-y-1/2 items-center justify-between rounded-full border-2 border-gold bg-surface-light px-2 text-gold shadow-[0_0_18px_rgba(215,169,79,0.75),0_8px_28px_rgba(0,0,0,0.5)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_26px_rgba(215,169,79,0.95),0_8px_28px_rgba(0,0,0,0.5)] peer-focus-visible:scale-105 peer-active:scale-110 peer-active:bg-gold peer-active:text-surface md:h-11 md:w-[94px] md:px-2.5">
+          <Icon
+            name="arrowRight"
+            className="h-4 w-4 shrink-0 rotate-180 opacity-80 md:h-5 md:w-5"
+          />
+          <span className="text-[8px] font-bold tracking-[0.16em] text-gold-light md:text-[9px]">
+            DRAG
+          </span>
+          <Icon
+            name="arrowRight"
+            className="h-4 w-4 shrink-0 opacity-80 md:h-5 md:w-5"
+          />
         </div>
       </div>
     </div>
